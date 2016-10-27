@@ -1,0 +1,4 @@
+title: Pizza
+modelClass: Samat\Pizzas\Models\Pizzas
+toolbar:
+    buttons: reorder_toolbar

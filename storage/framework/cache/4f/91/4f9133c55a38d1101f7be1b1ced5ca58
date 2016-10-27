@@ -1,0 +1,62 @@
+1477572759a:1:{s:10:"header.htm";a:6:{s:8:"fileName";s:10:"header.htm";s:7:"content";s:1599:"==
+<!-- Preloader -->
+<div class="preloader flex flex-middle">
+    <img src={{"assets/img/svg/cube.svg" | theme }} class="preloader-cubes" alt="Загрузка..." />
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top is-transparent" role="navigation">
+    <div class="container">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Pizza Land</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" role="menubar">
+                <li role="menuitem"><a href="/">Главная</a></li>
+                <li role="menuitem"><a href="/about">О нас</a></li>
+                <li role="menuitem"><a href="/contact">Контакты</a></li>
+                <li role="menuitem"><a href="/basket"> <i class="fa fa-shopping-cart"> Корзина <span class="badge">{% partial 'basket'%}</span></i></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>";s:5:"mtime";i:1477493817;s:6:"markup";s:1596:"<!-- Preloader -->
+<div class="preloader flex flex-middle">
+    <img src={{"assets/img/svg/cube.svg" | theme }} class="preloader-cubes" alt="Загрузка..." />
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top is-transparent" role="navigation">
+    <div class="container">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Pizza Land</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" role="menubar">
+                <li role="menuitem"><a href="/">Главная</a></li>
+                <li role="menuitem"><a href="/about">О нас</a></li>
+                <li role="menuitem"><a href="/contact">Контакты</a></li>
+                <li role="menuitem"><a href="/basket"> <i class="fa fa-shopping-cart"> Корзина <span class="badge">{% partial 'basket'%}</span></i></a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}

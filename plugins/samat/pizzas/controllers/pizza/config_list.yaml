@@ -1,0 +1,11 @@
+list: $/samat/pizzas/models/pizzas/columns.yaml
+modelClass: Samat\Pizzas\Models\Pizzas
+title: Pizza
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'samat/pizzas/pizza/update/:id'

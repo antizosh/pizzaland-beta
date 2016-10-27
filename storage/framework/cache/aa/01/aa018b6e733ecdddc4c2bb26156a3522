@@ -1,0 +1,38 @@
+1477572759a:1:{s:10:"basket.htm";a:6:{s:8:"fileName";s:10:"basket.htm";s:7:"content";s:301:"==
+<?php
+use samat\pizzas\models\Pizzas;
+
+function onStart(){
+	$sum = 0;
+	$pizzas = Pizzas::get();
+	
+	foreach($pizzas as $pizza){
+		if(Session::has('pizza'.$pizza->id)){
+			
+			$sum += Session::get('pizza'.$pizza->id,0); 
+			
+		}
+		
+	}
+	$this['quantity'] = $sum;
+	
+}
+?>
+==
+{{quantity}}";s:5:"mtime";i:1477494638;s:6:"markup";s:12:"{{quantity}}";s:4:"code";s:273:"use samat\pizzas\models\Pizzas;
+
+function onStart(){
+	$sum = 0;
+	$pizzas = Pizzas::get();
+	
+	foreach($pizzas as $pizza){
+		if(Session::has('pizza'.$pizza->id)){
+			
+			$sum += Session::get('pizza'.$pizza->id,0); 
+			
+		}
+		
+	}
+	$this['quantity'] = $sum;
+	
+}";s:17:"_PARSER_ERROR_INI";s:0:"";}}

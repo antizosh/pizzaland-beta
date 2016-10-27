@@ -1,0 +1,10 @@
+name: Pizza
+form: $/samat/pizzas/models/pizzas/fields.yaml
+modelClass: Samat\Pizzas\Models\Pizzas
+defaultRedirect: samat/pizzas/pizza
+create:
+    redirect: 'samat/pizzas/pizza/update/:id'
+    redirectClose: samat/pizzas/pizza
+update:
+    redirect: samat/pizzas/pizza
+    redirectClose: samat/pizzas/pizza

@@ -1,0 +1,44 @@
+1477572758a:1:{s:10:"basket.htm";a:9:{s:8:"fileName";s:10:"basket.htm";s:7:"content";s:561:"title = "Корзина"
+url = "/basket"
+layout = "default"
+is_hidden = 0
+==
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="page-title">Корзина</h1>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main" role="main">
+ <div class="container">
+ 	<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    	
+    </div>
+</div>
+    </div>
+    <!-- Scroll top icon-square_up-->
+    <a class="scroll-top icon icon-arrow-up"></a>
+</main>";s:5:"mtime";i:1477487436;s:6:"markup";s:484:"<header class="site-header" role="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="page-title">Корзина</h1>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="main" role="main">
+ <div class="container">
+ 	<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    	
+    </div>
+</div>
+    </div>
+    <!-- Scroll top icon-square_up-->
+    <a class="scroll-top icon icon-arrow-up"></a>
+</main>";s:4:"code";N;s:5:"title";s:14:"Корзина";s:3:"url";s:7:"/basket";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

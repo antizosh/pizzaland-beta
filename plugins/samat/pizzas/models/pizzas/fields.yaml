@@ -1,0 +1,27 @@
+fields:
+    title:
+        label: Название
+        oc.commentPosition: ''
+        span: left
+        type: text
+    description:
+        label: Описание
+        oc.commentPosition: ''
+        span: full
+        type: text
+    price:
+        label: Цена
+        oc.commentPosition: ''
+        span: left
+        type: number
+    image:
+        label: Картинка
+        oc.commentPosition: ''
+        mode: image
+        span: right
+        type: mediafinder
+    available:
+        label: Наличие
+        span: right
+        default: 1
+        type: checkbox

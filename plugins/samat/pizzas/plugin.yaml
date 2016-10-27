@@ -1,0 +1,11 @@
+plugin:
+    name: 'samat.pizzas::lang.plugin.name'
+    description: 'samat.pizzas::lang.plugin.description'
+    author: Samat
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Пиццерия
+        url: samat/pizzas/pizza
+        icon: icon-cutlery

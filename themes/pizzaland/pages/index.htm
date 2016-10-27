@@ -1,0 +1,87 @@
+title = "Главная"
+url = "/"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use samat\pizzas\models\Pizzas;
+
+
+function onStart(){
+	$pizzas = Pizzas::where('available', 1)->get();
+	
+	$this['menu'] = $pizzas;
+	
+}
+
+function onAdd(){
+	$pizza_id = post('pizza_id');
+	$quantity = post('quantity');
+	
+	if ($quantity > 0){
+		Session::put('pizza'.$pizza_id, $quantity + Session::get('pizza'.$pizza_id,0));
+		
+	}
+	
+	
+	
+}
+?>
+==
+<!-- Header -->
+<header class="header hero flex flex-middle" role="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <h1>Pizza Land</h1>
+        <h4 class="snserif">Лучшая пицца в Алматы</h4>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Content -->
+<main class="main" role="main">
+  <div class="container">
+	
+	<section class="masonry">
+	  <div class="grid-sizer"></div>
+	  <div class="gutter-sizer"></div>
+	 
+
+    {% for pizza in menu %}
+	  <div class="item">
+	      <article class="post">
+	          <figure class="figure square">
+	              <div class="img-trigger">
+	                  <img src="{{pizza.image | media }}" alt="img" />
+	              </div>
+	          </figure>
+	          <section class="post-content">
+	              <h4 class="post-title">{{ pizza.title }}</h4>
+	              <h6 class="price">{{pizza.price}} тг</h6>
+	              <p>{{ pizza.description}}</p>
+	              <form data-request="onAdd" data-request-update="basket: '.badge'">
+	              	<div class="row">
+	              		<div class="col-md-4">
+		              		<input type="number" name="quantity" value='1' min='1' class='form-control'>
+		              		<input type="hidden" name="pizza_id" value="{{pizza.id}}">
+		              	</div>
+		              	<div class="col-md-8">
+		              		<button class="btn btn-success form-control">В Корзину</button>
+		              	</div>
+	              	</div>
+	              </form>
+	              
+	              
+	          </section>
+	      </article>
+	  </div>
+	  {% endfor %}
+	  
+	</section>
+	
+    </div>
+    <!-- Scroll top icon-square_up-->
+    <a class="scroll-top icon icon-arrow-up"></a>
+</main>
