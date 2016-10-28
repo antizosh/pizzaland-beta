@@ -1,7 +1,49 @@
-1477572758a:1:{s:10:"basket.htm";a:9:{s:8:"fileName";s:10:"basket.htm";s:7:"content";s:561:"title = "Корзина"
+1477668023a:1:{s:10:"basket.htm";a:9:{s:8:"fileName";s:10:"basket.htm";s:7:"content";s:2408:"title = "Корзина"
 url = "/basket"
 layout = "default"
 is_hidden = 0
+==
+<?php
+use samat\pizzas\models\Pizzas;
+
+
+function onStart(){
+	 
+	$pizzas = Pizzas::get();
+	$array = [];
+	$total = 0;
+	foreach($pizzas as $pizza){
+	   $id =$pizza->id;
+		if (Session::has('pizza'.$id)){
+			$price = $pizza->price;
+			$title = $pizza->title;
+			$quantity = Session::get('pizza'.$id,0);
+			
+			$total += $quantity*$price;
+			
+		array_push($array, compact('title', 'price', 'id', 'quantity'));	
+		}
+	
+		
+	}
+	$this['total'] = $total;
+	$this['pizzas'] = $array;
+}
+
+function onSend(){
+	$name = post('name');
+	$phone = post('phone');
+	$address = post('address');
+	$order  = post('order');
+	$vars = compact('name', 'phone', 'address', 'order');
+	
+	Mail::send('new.order', $vars, function($message){
+		$message->to("samat@method.kz");
+		
+	});
+	
+}
+?>
 ==
 <header class="site-header" role="banner">
   <div class="container">
@@ -16,13 +58,33 @@ is_hidden = 0
  <div class="container">
  	<div class="row">
     <div class="col-md-8 col-md-offset-2">
+    	{%for pizza in pizzas%}
+    		<h2>{{pizza.title}} x {{pizza.quantity}}шт. = {{pizza.price*pizza.quantity}} тг.</h2>
+    	{% endfor%}
     	
+    	<h3>Сумма: {{total}}</h3>
+    	
+    {% if user %}	
+    	<form data-request="onSend" data-request-redirect="/">
+    		<input type="text" name='name' placeholder="Имя" value="{{user.name}}" class="form-control">
+    		<input type="text" name='phone' placeholder="Телефон" class="form-control">
+    		<input type="text" name="address" placeholder="Введите адрес" class="form-control">
+    		<input type="hidden" name='order' value="{%for pizza in pizzas%}
+    		<h2>{{pizza.title}} x {{pizza.quantity}}шт. = {{pizza.price*pizza.quantity}} тг.</h2>
+    	{% endfor%}
+    	
+    	<h3>Сумма: {{total}}</h3>">
+    		<button type='submit' class="btn btn-success">Отправить заказ</button>
+    	</form>
+    {%else%}
+    	<h2>Для отправки заказа нужна <a href="{{'login'| page}}">регистрация</a></h2>
+    {%endif%}
     </div>
 </div>
     </div>
     <!-- Scroll top icon-square_up-->
     <a class="scroll-top icon icon-arrow-up"></a>
-</main>";s:5:"mtime";i:1477487436;s:6:"markup";s:484:"<header class="site-header" role="banner">
+</main>";s:5:"mtime";i:1477667371;s:6:"markup";s:1536:"<header class="site-header" role="banner">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -35,10 +97,68 @@ is_hidden = 0
  <div class="container">
  	<div class="row">
     <div class="col-md-8 col-md-offset-2">
+    	{%for pizza in pizzas%}
+    		<h2>{{pizza.title}} x {{pizza.quantity}}шт. = {{pizza.price*pizza.quantity}} тг.</h2>
+    	{% endfor%}
     	
+    	<h3>Сумма: {{total}}</h3>
+    	
+    {% if user %}	
+    	<form data-request="onSend" data-request-redirect="/">
+    		<input type="text" name='name' placeholder="Имя" value="{{user.name}}" class="form-control">
+    		<input type="text" name='phone' placeholder="Телефон" class="form-control">
+    		<input type="text" name="address" placeholder="Введите адрес" class="form-control">
+    		<input type="hidden" name='order' value="{%for pizza in pizzas%}
+    		<h2>{{pizza.title}} x {{pizza.quantity}}шт. = {{pizza.price*pizza.quantity}} тг.</h2>
+    	{% endfor%}
+    	
+    	<h3>Сумма: {{total}}</h3>">
+    		<button type='submit' class="btn btn-success">Отправить заказ</button>
+    	</form>
+    {%else%}
+    	<h2>Для отправки заказа нужна <a href="{{'login'| page}}">регистрация</a></h2>
+    {%endif%}
     </div>
 </div>
     </div>
     <!-- Scroll top icon-square_up-->
     <a class="scroll-top icon icon-arrow-up"></a>
-</main>";s:4:"code";N;s:5:"title";s:14:"Корзина";s:3:"url";s:7:"/basket";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}
+</main>";s:4:"code";s:782:"use samat\pizzas\models\Pizzas;
+
+
+function onStart(){
+	 
+	$pizzas = Pizzas::get();
+	$array = [];
+	$total = 0;
+	foreach($pizzas as $pizza){
+	   $id =$pizza->id;
+		if (Session::has('pizza'.$id)){
+			$price = $pizza->price;
+			$title = $pizza->title;
+			$quantity = Session::get('pizza'.$id,0);
+			
+			$total += $quantity*$price;
+			
+		array_push($array, compact('title', 'price', 'id', 'quantity'));	
+		}
+	
+		
+	}
+	$this['total'] = $total;
+	$this['pizzas'] = $array;
+}
+
+function onSend(){
+	$name = post('name');
+	$phone = post('phone');
+	$address = post('address');
+	$order  = post('order');
+	$vars = compact('name', 'phone', 'address', 'order');
+	
+	Mail::send('new.order', $vars, function($message){
+		$message->to("samat@method.kz");
+		
+	});
+	
+}";s:5:"title";s:14:"Корзина";s:3:"url";s:7:"/basket";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}

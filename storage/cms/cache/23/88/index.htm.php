@@ -1,5 +1,5 @@
 <?php 
-use samat\pizzas\models\Pizzas;class Cms5810c780ea032881523434_1811960437Class extends \Cms\Classes\PageCode
+use samat\pizzas\models\Pizzas;class Cms58136422dec3c187775352_4098117810Class extends \Cms\Classes\PageCode
 {
 
 public function onStart(){

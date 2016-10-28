@@ -1,4 +1,6 @@
-1477572758a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2234:"==
+1477667647a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2261:"[session]
+security = "all"
+==
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -60,7 +62,7 @@
         {% scripts %}
     
     </body>
-</html>";s:5:"mtime";i:1477487436;s:6:"markup";s:2231:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1477664775;s:6:"markup";s:2231:"<!DOCTYPE html>
 <html class="no-js">
     <head>
 
@@ -121,4 +123,4 @@
         {% scripts %}
     
     </body>
-</html>";s:4:"code";N;s:17:"_PARSER_ERROR_INI";s:0:"";}}
+</html>";s:4:"code";N;s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

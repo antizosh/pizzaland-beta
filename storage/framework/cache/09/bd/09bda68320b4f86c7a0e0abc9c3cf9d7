@@ -1,4 +1,4 @@
-1477572758a:1:{s:9:"index.htm";a:9:{s:8:"fileName";s:9:"index.htm";s:7:"content";s:2236:"title = "Главная"
+1477667647a:1:{s:9:"index.htm";a:9:{s:8:"fileName";s:9:"index.htm";s:7:"content";s:2236:"title = "Главная"
 url = "/"
 layout = "default"
 is_hidden = 0
@@ -84,7 +84,7 @@ function onAdd(){
     </div>
     <!-- Scroll top icon-square_up-->
     <a class="scroll-top icon icon-arrow-up"></a>
-</main>";s:5:"mtime";i:1477493922;s:6:"markup";s:1797:"<!-- Header -->
+</main>";s:5:"mtime";i:1477660594;s:6:"markup";s:1797:"<!-- Header -->
 <header class="header hero flex flex-middle" role="banner">
   <div class="container">
     <div class="row">
